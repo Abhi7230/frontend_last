@@ -29,7 +29,7 @@ const AdminAll = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:2999/api/problems')
+    fetch('https://backend-last-v2sp.vercel.app/api/problems')
       .then((res) => res.json())
       .then((data) => setProblems(data))
       .catch((error) => {
