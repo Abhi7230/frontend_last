@@ -26,7 +26,7 @@ const ProblemComponent = () => {
   useEffect(() => {
     async function getProblemDetails() {
       try {
-        const response = await fetch(`http://localhost:2999/problemdetails/${problemId}`, {
+        const response = await fetch(`https://backend-last-v2sp.vercel.app/${problemId}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
