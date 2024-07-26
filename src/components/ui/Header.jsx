@@ -77,7 +77,7 @@ const Header = () => {
 
   async function getUserDetails() {
     try {
-      const response = await fetch('http://localhost:2999/userdetails', {
+      const response = await fetch('https://backend-last-v2sp.vercel.app/userdetails', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
