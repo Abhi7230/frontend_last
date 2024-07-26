@@ -114,7 +114,7 @@ const Dashboard = () => {
       let response;
       switch (formType) {
         case 'profile':
-          response = await fetch('http://localhost:2999/user/profile', {
+          response = await fetch('https://backend-last-v2sp.vercel.app/user/profile', {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ const Dashboard = () => {
           });
           break;
         case 'password':
-          response = await fetch('http://localhost:2999/user/change-password', {
+          response = await fetch('https://backend-last-v2sp.vercel.app/change-password', {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ const Dashboard = () => {
           });
           break;
         case 'delete':
-          response = await fetch('http://localhost:2999/user/account', {
+          response = await fetch('https://backend-last-v2sp.vercel.app/user/account', {
             method: 'DELETE',
             headers: {
               'Authorization': `Bearer ${authToken}`
@@ -183,7 +183,7 @@ const Dashboard = () => {
 
   const handleViewAllSubmissions = async () => {
     try {
-      const response = await fetch('http://localhost:3000/user/all-submissions', {
+      const response = await fetch('https://backend.algotech.website/user/all-submissions', {
         headers: { 'Authorization': `Bearer ${authToken}` }
       });
       const data = await response.json();
