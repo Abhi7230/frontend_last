@@ -44,7 +44,7 @@ const AdminUpdate = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:2999/problem/update/${problemId}`, {
+    fetch(`https://backend-last-v2sp.vercel.app/problem/update/${problemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
