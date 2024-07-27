@@ -67,10 +67,10 @@ const Dashboard = () => {
       setIsLoading(true);
       try {
         const [userDetails, stats, monthlyStats, topicStats] = await Promise.all([
-          fetch('http://localhost:2999/userdetails', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
-          fetch('http://localhost:3000/user/statistics', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
-          fetch('http://localhost:3000/user/monthly-stats', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
-          fetch('http://localhost:3000/user/topic-stats', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json())
+          fetch('https://backend-last-v2sp.vercel.app/userdetails', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
+          fetch('https://backend.algotech.website/user/statistics', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
+          fetch('https://backend.algotech.website/user/monthly-stats', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
+          fetch('https://backend.algotech.website/user/topic-stats', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json())
         ]);
 
         setUser(userDetails);
