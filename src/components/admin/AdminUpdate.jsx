@@ -24,7 +24,7 @@ const AdminUpdate = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://backend-last-v2sp.vercel.app/problemdetails/${problemId}`)
+    fetch(`https://backend-render-3iug.onrender.com/${problemId}`)
       .then((res) => res.json())
       .then((data) => {
         setProblem(data);
