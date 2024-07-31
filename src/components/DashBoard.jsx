@@ -114,7 +114,7 @@ const Dashboard = () => {
       let response;
       switch (formType) {
         case 'profile':
-          response = await fetch('https://backend-last-v2sp.vercel.app/user/profile', {
+          response = await fetch('https://backend-render-3iug.onrender.com/user/profile', {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ const Dashboard = () => {
           });
           break;
         case 'password':
-          response = await fetch('https://backend-last-v2sp.vercel.app/change-password', {
+          response = await fetch('https://backend-render-3iug.onrender.com/change-password', {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ const Dashboard = () => {
           });
           break;
         case 'delete':
-          response = await fetch('https://backend-last-v2sp.vercel.app/user/account', {
+          response = await fetch('https://backend-render-3iug.onrender.com/user/account', {
             method: 'DELETE',
             headers: {
               'Authorization': `Bearer ${authToken}`
@@ -183,7 +183,7 @@ const Dashboard = () => {
 
   const handleViewAllSubmissions = async () => {
     try {
-      const response = await fetch('https://backend.algotech.website/user/all-submissions', {
+      const response = await fetch('https://backend-render-3iug.onrender.com/user/all-submissions', {
         headers: { 'Authorization': `Bearer ${authToken}` }
       });
       const data = await response.json();
