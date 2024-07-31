@@ -119,7 +119,7 @@ const Signup = () => {
 
   const checkUsernameExists = async (username) => {
     // Simulate an API call to check if the username exists
-    const response = await fetch(`https://backend-last-v2sp.vercel.app/check-username`, {
+    const response = await fetch(`https://backend-render-3iug.onrender.com/check-username`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
