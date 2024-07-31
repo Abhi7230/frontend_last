@@ -53,7 +53,7 @@ const Editor = () => {
   useEffect(() => {
     const fetchProblem = async () => {
       try {
-        const response = await axios.get(`https://backend-last-v2sp.vercel.app/${problemId}`);
+        const response = await axios.get(`https://backend-render-3iug.onrender.com/${problemId}`);
         setProblem(response.data);
       } catch (error) {
         console.error("Error fetching problem:", error);
@@ -90,7 +90,7 @@ const Editor = () => {
         const payload = { language, code };
         console.log('Payload:', JSON.stringify(payload));
 
-        const response = await fetch(`https://backend.algotech.website/submit/${problemId}`,  {
+        const response = await fetch(`https://backend-render-3iug.onrender.com/${problemId}`,  {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
