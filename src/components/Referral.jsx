@@ -25,7 +25,7 @@ const Referral = () => {
     try {
       setIsLoading(true);
       const token = Cookies.get('authToken');
-      const response = await fetch('https://backend-last-v2sp.vercel.app/user/referral', {
+      const response = await fetch('https://backend-render-3iug.onrender.com/user/referral', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
