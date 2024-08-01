@@ -59,7 +59,7 @@ const Login = () => {
 
   const loginUser = async () => {
     try {
-      const response = await fetch(`https://backend-render-3iug.onrender.com//login`, {
+      const response = await fetch(`https://backend-render-3iug.onrender.com/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
