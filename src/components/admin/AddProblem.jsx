@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -29,7 +29,7 @@ const AddProblem = () => {
   const [outputDescription, setOutputDescription] = useState("");
   const [sampleCases, setSampleCases] = useState([{ sample_input: "", sample_output: "" }]);
   const [constraints, setConstraints] = useState("");
-  const [hints, setHints] = useState([{ hints: "" }]);
+  const [hints, setHints] = useState([""]); // Changed to array of strings
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [lockedTestCases, setLockedTestCases] = useState([
     { input: "", output: "" },
@@ -79,7 +79,7 @@ const AddProblem = () => {
   };
 
   const handleAddHint = () => {
-    setHints([...hints, { hints: "" }]);
+    setHints([...hints, ""]); // Changed to add empty string
   };
 
   const handleRemoveHint = (index) => {
@@ -115,7 +115,7 @@ const AddProblem = () => {
       output_description: outputDescription,
       sample_cases: sampleCases,
       constraints,
-      hints,
+      hints, // Directly map to an array of strings
       topics: selectedTopics,
       locked_test_cases: lockedTestCases,
       admin_solution: adminSolution,
@@ -257,10 +257,10 @@ const AddProblem = () => {
                 <HStack key={index} mt={2}>
                   <Input
                     placeholder="Hint"
-                    value={hint.hints}
+                    value={hint}
                     onChange={(e) => {
                       const newHints = [...hints];
-                      newHints[index].hints = e.target.value;
+                      newHints[index] = e.target.value;
                       setHints(newHints);
                     }}
                   />
