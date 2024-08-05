@@ -90,7 +90,7 @@ const Editor = () => {
         const payload = { language, code };
         console.log('Payload:', JSON.stringify(payload));
 
-        const response = await fetch(`https://backend-last.vercel.app/problemdetails/${problemId}`,  {
+        const response = await fetch(`https://backend.algotech.website/submit/${problemId}`,  {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
