@@ -67,7 +67,7 @@ const Dashboard = () => {
       setIsLoading(true);
       try {
         const [userDetails, stats, monthlyStats, topicStats] = await Promise.all([
-          fetch('https://backend-last-v2sp.vercel.app/userdetails', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
+          fetch('https://backend-last.vercel.app/userdetails', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
           fetch('https://backend.algotech.website/user/statistics', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
           fetch('https://backend.algotech.website/user/monthly-stats', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json()),
           fetch('https://backend.algotech.website/user/topic-stats', { headers: { 'Authorization': `Bearer ${authToken}` } }).then(res => res.json())
