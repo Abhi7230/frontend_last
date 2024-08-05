@@ -119,7 +119,7 @@ const Signup = () => {
 
   const checkUsernameExists = async (username) => {
     // Simulate an API call to check if the username exists
-    const response = await fetch(`https://backend-render-3iug.onrender.com/check-username`, {
+    const response = await fetch(`https://backend-last.vercel.app/check-username`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ const Signup = () => {
 
   const checkEmailExists = async (email) => {
     // Simulate an API call to check if the email exists
-    const response = await fetch(`https://backend-last-v2sp.vercel.app/check-email`, {
+    const response = await fetch(`https://backend-last.vercel.app/check-email`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ const Signup = () => {
 
   const registerUser = async () => {
     try {
-      const response = await fetch(`https://backend-last-v2sp.vercel.app/register/${referralid}`, {
+      const response = await fetch(`https://backend-last.vercel.app/register/${referralid}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
