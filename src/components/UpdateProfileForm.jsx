@@ -17,7 +17,7 @@ const UpdateProfileForm = ({ onClose }) => {
 
   async function getUserDetails() {
     try {
-      const response = await fetch('https://backend-render-3iug.onrender.com/userdetails', {
+      const response = await fetch('https://backend-last.vercel.app/userdetails', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const UpdateProfileForm = ({ onClose }) => {
     setIsUpdating(true);
 
     try {
-      const response = await fetch('https://backend-render-3iug.onrender.com/updateprofile', {
+      const response = await fetch('https://backend-last.vercel.app/updateprofile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
