@@ -95,7 +95,7 @@ const AllProblems = () => {
   useEffect(() => {
     const fetchProblems = async () => {
       try {
-        const response = await fetch('https://backend-render-3iug.onrender.com/api/problems');
+        const response = await fetch('https://backend-last.vercel.app/api/problems');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
