@@ -24,7 +24,7 @@ const AdminUpdate = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://backend-render-3iug.onrender.com/${problemId}`)
+    fetch(`https://backend-last.vercel.app/${problemId}`)
       .then((res) => res.json())
       .then((data) => {
         setProblem(data);
@@ -44,7 +44,7 @@ const AdminUpdate = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://backend-last-v2sp.vercel.app/problem/update/${problemId}`, {
+    fetch(`https://backend-last.vercel.app/problem/update/${problemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
