@@ -29,7 +29,7 @@ const AdminAll = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://backend-render-3iug.onrender.com/api/problems')
+    fetch('https://backend-last.vercel.app/api/problems')
       .then((res) => res.json())
       .then((data) => setProblems(data))
       .catch((error) => {
@@ -51,7 +51,7 @@ const AdminAll = () => {
   const handleConfirmDelete = () => {
     if (confirmText === 'confirm') {
       const pId = selectedProblem._id;
-      fetch(`http://localhost:2999/problem/${pId}`, { method: 'DELETE' })
+      fetch(`https://backend-last.vercel.app/problem/${pId}`, { method: 'DELETE' })
         .then((res) => {
           if (res.ok) {
             setProblems(problems.filter((p) => p._id !== selectedProblem._id));
